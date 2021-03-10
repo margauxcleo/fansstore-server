@@ -24,8 +24,14 @@ require("./routes/orders.route")(app);
 require("./routes/orderDetails.route")(app);
 
 
-const PORT = process.env.PORT | 5000;
+// const PORT = process.env.PORT | 5000;
 
-app.listen(process.env.PORT | 5000, () => {
-    console.log(`Server listening on port ${PORT}`);
+// app.listen(process.env.PORT | 5000, () => {
+//     console.log(`Server listening on port ${PORT}`);
+// });
+
+var server_port = process.env.YOUR_PORT || process.env.PORT || 8088;
+
+app.listen(server_port, function() {
+console.log('Listening on port %d', server_port);
 });
