@@ -58,7 +58,7 @@ exports.signup = (req, res) => {
           // 7. On crée le token du client, pour que dès qu'il soit créé, 
           // son token est généré, ce qui permettra de mettre en place le localStorage sans qu'il ait besoin de se connecter manuellement 
           return res.status(200).json({ jwt: jwt.sign(
-            {user: {id: user.clientId}}, 
+            {user: {id: client.clientId}}, 
             config.secret, 
             { expiresIn: '24h'}) });
         })
