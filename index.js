@@ -24,8 +24,8 @@ require("./routes/orders.route")(app);
 require("./routes/orderDetails.route")(app);
 
 
-const PORT = process.env.PORT | 8088;
+const PORT = process.env.PORT | 5000;
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT | 5000, () => {
     console.log(`Server listening on port ${PORT}`);
 });
